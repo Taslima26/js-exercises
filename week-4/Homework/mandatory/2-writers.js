@@ -54,18 +54,55 @@ Exercise 1:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
 
+console.log('output using array methods filter and mapping');
+var data = writers.map(writer => {
+  console.log('Hi,my name is ' + writer.firstName + ' ' + writer.lastName + ' . I am ' + writer.age + ' years old, and work as a '+writer.occupation);
+  
+  
+ });
 
+//let me try for in here
+//struggling with for in here as this is an object array its best to use simple for loop 
 
+console.log('output using for loop');
+for (var indexes=0; indexes< writers.length;indexes++) {
+  console.log('Hi , my name is ' + writers[indexes].firstName + ' ' + writers[indexes].lastName + ' . I am ' + writers[indexes].age + ' years old, and work as a ' + writers[indexes].occupation);
+}
+
+// for each 
+console.log('output using for each loop');
+writers.forEach((writer) =>
+  console.log(
+    'Hi, my name is ' + writer.firstName +' ' + writer.lastName + ' . I am  '+ writer.age +', and work as a' + writer.occupation
+  )
+)
 /*
 Exercise 2:
   Only `console.log()` the writers who are in their 40s with us anymore with the sentence:(meaning between 40 and 49)
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
+//first use filter array to find writers in their 40's
+console.log('Writers who are in their fourties:')
+var inFourtiesAndDied = writers.filter(lookupAge => lookupAge.age > 40 && lookupAge.age < 50);
+//than use map to output filter result in required format
+var inFourtiesInfo = inFourtiesAndDied.map(writer => {
+  
+  console.log('Writer ' + writer.firstName + ' ' + writer.lastName + ' died at ' + writer.age  + '  Years old .');
+})
 
+// /*
+// Exercise 3:
+//   Only `console.log()` contemporary writers who are in their forties:
+//   "Hi, my name is {firstName} {lastName}. I am {age} years old."
+// */
+console.log('Contemporary writers who are in their forties:');
+// var now = new Date();
 
-/*
-Exercise 3:
-  Only `console.log()` contemporary writers who are in their forties:
-  "Hi, my name is {firstName} {lastName}. I am {age} years old."
-*/
+var inFourtiesAndAlive = writers.filter(lookupAge => lookupAge.age > 40 && lookupAge.age < 50 && lookupAge.alive);
+//than use map to output filter result in required format
+
+var inFourtiesInfo = inFourtiesAndAlive.map(writer => {
+  
+  console.log('Hi , my name is ' + writer.firstName + ' ' + writer.lastName + ' . I am ' + writer.age + ' years old' );
+})

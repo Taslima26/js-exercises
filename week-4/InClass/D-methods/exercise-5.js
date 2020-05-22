@@ -17,11 +17,14 @@ let coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function (amount) {
+        console.log(coffeeMachine[amount]);
 
     },
     getCoffee: function (coffee) {
+        
+        }
 
-    }
+    
 };
 
 

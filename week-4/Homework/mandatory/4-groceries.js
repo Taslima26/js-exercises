@@ -29,16 +29,35 @@ Exercise 1:
 */
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
+for (dayOfWeek in weeklyMealPlan) {
+  //   for (let i = 0; i < weeklyMealPlan[dayOfWeek].length;i++)
 
+  //   weeklyGroceriesToBuy.push(weeklyMealPlan[dayOfWeek][i]);
+  // }
+  weeklyGroceriesToBuy.push(weeklyMealPlan[dayOfWeek]);
+  console.log(weeklyGroceriesToBuy);
+}
 
 
 /*
 Exercise 2:
   Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
-  Then use console.log() to print out the list.
+  Thecn use console.log() to print out the list.
 */
 // Gather weekend item names into this array
-let weekendGroceriesToBuy = [];
+//     let weekendGroceriesToBuy = [];
+// for (let dayOfWeek in weeklyMealPlan) {
+
+
+//   if (dayOfWeek ==='saturday' || dayOfWeek==='sunday' ) {
+//     for (foodItems = 0; foodItems<weeklyMealPlan[dayOfWeek].length ; foodItems++) {
+     
+//       weekendGroceriesToBuy.push(weeklyMealPlan[dayOfWeek][foodItems]);
+//     }
+//   }
+//   console.log(weekendGroceriesToBuy);
+ 
+// }
 
 
 

@@ -19,17 +19,20 @@ var person3 = {
     age: 20
 };
 
+var personsArray = [person1, person2, person3];
 /* 
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
 
-var persons = // Complete here
+var personsName = personsArray.map(key => key.name);
+return personsName;
+ // Complete here
 
-var personNames = // Complete here
+//var personNames = // Complete here
 
-var personsYoungerThan28YearsOld = // Complete here
+//var personsYoungerThan28YearsOld = // Complete here
 
 
 /*
