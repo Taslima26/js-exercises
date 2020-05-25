@@ -16,7 +16,11 @@ var UKBigCitiesInMillions = {
 //1- We discovered a small error in the calculations, we need to add 200 thousdands to each city under 1 million
 //create a loop that write the names of the city over 1 million only to the console
 // Example : "The city of x has a popluation of 1.5 million"
+console.log();
 for (let city in UKBigCitiesInMillions) {
+  if (UKBigCitiesInMillions[city] > 1) {
+    console.log('The city of ' + city + ' has a population of ' + UKBigCitiesInMillions[city]);
+  }
 }
 
 //2-We need to know in which area each city is
@@ -25,6 +29,17 @@ for (let city in UKBigCitiesInMillions) {
 var Scotland = ["Glasgow", "Edinburgh"];
 var England = ["Manchester", "Birmingham", "London", "Newcastle"];
 var Wales = ["Cardiff", "Swansea"];
-
+  console.log()
 for (let city in UKBigCitiesInMillions) {
+  if (Scotland.includes(city)) {
+    console.log(city + ' is in Scotland and has population of ' + UKBigCitiesInMillions[city]);
+  }
+  console.log();
+ if (England.includes(city)) {
+    console.log(city + ' is in England and has population of ' + UKBigCitiesInMillions[city]);
+  }
+  console.log();
+   if (Wales.includes(city)) {
+    console.log(city + ' is in Wales and has population of ' + UKBigCitiesInMillions[city]);
+  }
 }

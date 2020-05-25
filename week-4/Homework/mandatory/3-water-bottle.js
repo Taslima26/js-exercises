@@ -41,7 +41,7 @@ let bottle = {
   },
   drink: function() {
     // calling this function should decrease your bottle volume by 10 unit;
-    
+    this.volume == -10;
   },
   isFull: function () {
     // this function should return true if your bottle is full;

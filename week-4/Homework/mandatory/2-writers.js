@@ -54,24 +54,23 @@ Exercise 1:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
 
-console.log('output using array methods filter and mapping');
-var data = writers.map(writer => {
-  console.log('Hi,my name is ' + writer.firstName + ' ' + writer.lastName + ' . I am ' + writer.age + ' years old, and work as a '+writer.occupation);
-  
-  
- });
+  console.log ('output using array methods filter and mapping');
+  var data = writers.map (writer => {
+  console.log ('Hi,my name is ' + writer.firstName + ' ' + writer.lastName + ' . I am ' + writer.age + ' years old, and work as a '+writer.occupation);
+  });
 
+  console.log ();
 //let me try for in here
 //struggling with for in here as this is an object array its best to use simple for loop 
-
-console.log('output using for loop');
-for (var indexes=0; indexes< writers.length;indexes++) {
-  console.log('Hi , my name is ' + writers[indexes].firstName + ' ' + writers[indexes].lastName + ' . I am ' + writers[indexes].age + ' years old, and work as a ' + writers[indexes].occupation);
+  console.log ('output using for loop');
+  for (var indexes=0; indexes< writers.length;indexes++) {
+  console.log ('Hi , my name is ' + writers[indexes].firstName + ' ' + writers[indexes].lastName + ' . I am ' + writers[indexes].age + ' years old, and work as a ' + writers[indexes].occupation);
 }
 
 // for each 
-console.log('output using for each loop');
-writers.forEach((writer) =>
+  console.log ();
+  console.log ('output using for each loop');
+  writers.forEach ((writer) =>
   console.log(
     'Hi, my name is ' + writer.firstName +' ' + writer.lastName + ' . I am  '+ writer.age +', and work as a' + writer.occupation
   )
@@ -83,12 +82,12 @@ Exercise 2:
 */
 
 //first use filter array to find writers in their 40's
-console.log('Writers who are in their fourties:')
-var inFourtiesAndDied = writers.filter(lookupAge => lookupAge.age > 40 && lookupAge.age < 50);
+  console.log ('Writers who are in their fourties:')
+  var inFourtiesAndDied = writers.filter (lookupAge => lookupAge.age > 40 && lookupAge.age < 50);
 //than use map to output filter result in required format
-var inFourtiesInfo = inFourtiesAndDied.map(writer => {
+  var inFourtiesInfo = inFourtiesAndDied.map (writer => {
   
-  console.log('Writer ' + writer.firstName + ' ' + writer.lastName + ' died at ' + writer.age  + '  Years old .');
+  console.log ('Writer ' + writer.firstName + ' ' + writer.lastName + ' died at ' + writer.age  + '  Years old .');
 })
 
 // /*
@@ -96,13 +95,14 @@ var inFourtiesInfo = inFourtiesAndDied.map(writer => {
 //   Only `console.log()` contemporary writers who are in their forties:
 //   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 // */
-console.log('Contemporary writers who are in their forties:');
+  console.log();
+  console.log ('Contemporary writers who are in their forties:');
 // var now = new Date();
 
-var inFourtiesAndAlive = writers.filter(lookupAge => lookupAge.age > 40 && lookupAge.age < 50 && lookupAge.alive);
+  var inFourtiesAndAlive = writers.filter(lookupAge => lookupAge.age > 40 && lookupAge.age < 50 && lookupAge.alive);
 //than use map to output filter result in required format
 
-var inFourtiesInfo = inFourtiesAndAlive.map(writer => {
+  var inFourtiesInfo = inFourtiesAndAlive.map(writer => {
   
   console.log('Hi , my name is ' + writer.firstName + ' ' + writer.lastName + ' . I am ' + writer.age + ' years old' );
-})
+  })

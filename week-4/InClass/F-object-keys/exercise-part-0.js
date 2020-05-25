@@ -19,9 +19,12 @@ let highScores = {
 };
 
 // ONLY EDIT BELOW HERE
+console.log();
+let capitalCitiesKeys = Object.keys(capitalCities);
+console.log(capitalCities);
 
-let capitalCitiesKeys = ;
-let highScoresKeys;
+console.log();
+let highScoresKeys=Object.keys(highScores);
 
 // ONLY EDIT ABOVE HERE
 

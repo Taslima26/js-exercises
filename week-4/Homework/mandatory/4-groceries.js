@@ -27,16 +27,18 @@ Exercise 1:
   Loop through the weekly meal plan object to gather weakly ingredients into the weeklyGroceriesToBuy array.
   Then use console.log() to print out the list.
 */
-// Gather all week item names into this array
+
+console.log('Ex-1 Weekly groceries items to buy!')
 let weeklyGroceriesToBuy = [];
 for (dayOfWeek in weeklyMealPlan) {
-  //   for (let i = 0; i < weeklyMealPlan[dayOfWeek].length;i++)
-
-  //   weeklyGroceriesToBuy.push(weeklyMealPlan[dayOfWeek][i]);
-  // }
-  weeklyGroceriesToBuy.push(weeklyMealPlan[dayOfWeek]);
-  console.log(weeklyGroceriesToBuy);
+     for (let grocerieItem = 0; grocerieItem < weeklyMealPlan[dayOfWeek].length;grocerieItem++)
+    weeklyGroceriesToBuy.push(weeklyMealPlan[dayOfWeek][grocerieItem]);
+  //console.log('counter', weeklyMealPlan[dayOfWeek].length);
 }
+  console.log()
+  console.log(weeklyGroceriesToBuy);
+
+
 
 
 /*
@@ -45,23 +47,25 @@ Exercise 2:
   Thecn use console.log() to print out the list.
 */
 // Gather weekend item names into this array
-//     let weekendGroceriesToBuy = [];
-// for (let dayOfWeek in weeklyMealPlan) {
+console.log('Weekend groceries items to buy')
+  let weekendGroceriesToBuy = [];
+for (let dayOfWeek in weeklyMealPlan) {
 
-
-//   if (dayOfWeek ==='saturday' || dayOfWeek==='sunday' ) {
-//     for (foodItems = 0; foodItems<weeklyMealPlan[dayOfWeek].length ; foodItems++) {
+  if (dayOfWeek === 'saturday' || dayOfWeek === 'sunday') {
+    for (foodItems = 0; foodItems < weeklyMealPlan[dayOfWeek].length; foodItems++) {
      
-//       weekendGroceriesToBuy.push(weeklyMealPlan[dayOfWeek][foodItems]);
-//     }
-//   }
-//   console.log(weekendGroceriesToBuy);
+      weekendGroceriesToBuy.push(weeklyMealPlan[dayOfWeek][foodItems]);
+    }
+  }
+}
+  console.log();
+  console.log(weekendGroceriesToBuy);
  
 // }
 
 
 
-/*
+/*cl
 Exercise 2:
   Loop through your weekly meal plan:
     - count how many ingredients you should buy per each day
@@ -79,3 +83,13 @@ let numberOfItemsPerWeak = {
   saturday: 0,
   sunday: 0
 };
+//find number of items in each week array
+for (var weekDay in numberOfItemsPerWeak) {
+  for (var day in weeklyMealPlan) {
+    if (weekDay === day) {
+       numberOfItemsPerWeak[weekDay] = weeklyMealPlan[day].length;
+    }
+  }
+}
+  console.log();
+  console.log(numberOfItemsPerWeak);
