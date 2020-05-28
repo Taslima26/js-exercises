@@ -40,13 +40,34 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+    let destinationNamesWithin500Kms = [];
+    destinationNamesWithin500Kms = travelDestinations.filter
+                                    (reachableDestination => reachableDestination.distanceKms < 500).
+                                    map(name=>name.destinationName)// Complete here
+    console.log(destinationNamesWithin500Kms);
+    console.log();
+    console.log();
 
-let destinationNameReachableByFerry = // Complete here
+    let destinationNameReachableByFerry = []
+destinationNameReachableByFerry = travelDestinations.filter(
+    destinationsFerry => destinationsFerry.transportations.
+        includes ('ferry')) .
+        map(cityName => cityName.destinationName);
+console.log(destinationNameReachableByFerry);
+    
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+    console.log();
+    console.log();  
+let destinationNamesMoreThan300KmsAwayByTrain = [];
+destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(key => key.transportations.
+    includes('train') && key.distanceKms >= 300).
+    map(name => name.destinationName);
+                                            
+    
 
-
+        
+        
+        
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */

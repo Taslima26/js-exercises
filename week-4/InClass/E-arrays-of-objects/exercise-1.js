@@ -24,15 +24,23 @@ var personsArray = [person1, person2, person3];
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+// console.log(personsArray);
 
+// console.log();
 
-var personsName = personsArray.map(key => key.name);
-return personsName;
  // Complete here
 
 //var personNames = // Complete here
+var personsName = personsArray.map(key => key.name);
+return personsName;
+// console.log(personsName);
 
 //var personsYoungerThan28YearsOld = // Complete here
+console.log();
+var personsYoungerThan28YearsOld=[]
+personsYoungerThan28YearsOld    = personsArray.filter(key => key.age < 28);
+console.log(personsYoungerThan28YearsOld);
+//return personsYoungerThan28YearsOld;
 
 
 /*
