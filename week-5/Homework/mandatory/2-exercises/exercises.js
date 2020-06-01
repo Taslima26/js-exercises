@@ -37,10 +37,37 @@
  *      <h2>Plumber</h2>
  * </div>
  */
-function insertPeopleData(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  //Write your code in here
-}
+// let people = [
+//   { name: "Chris", job: "Teacher" },
+//   { name: "Joanna", job: "Student" },
+//   { name: "Boris", job: "Prime Minister" }
+// ];
+function insertPeopleData(people) {
+  var arrayLength = people.length;
+  if (arrayLength > 0) {
+
+    for (let i in people) {
+  
+      //console.log(people.name[i]);
+      var element1 = document.createElement("h1");
+      
+      var t1 = document.createTextNode(people[i].name);
+      element1.appendChild(t1);
+      document.body.appendChild(element1);
+   
+      var element3 = document.createElement("h2");
+      var t3 = document.createTextNode(people[i].job);
+      element1.appendChild(t3);
+      document.body.appendChild(element3);
+    }
+   
+  }
+  
+  }
+
+
+//   //Write your code in here
+// }
 
 /**
  *
@@ -51,9 +78,50 @@ function insertPeopleData(arrayOfPeople) {
  *
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
-function insertShoppingList(shoppingList) {
+let myShoppingList = ['Pizza', 'Pasta', 'Milk', 'Meat', 'Chicken', 'Mangos', 'Strawberries'];
+//get the container
+
+function insertShoppingList(myShoppingList) {
+  //get the container 
+  let container = document.getElementById('content');
+  //calculate the length of the array.
+  let arrayLength = myShoppingList.length;
+  if (arrayLength > 0) {
+    //create an unorder list if element present in array.
+    var myList = document.createElement('ul');
+    //add  class name to a list
+    myList.className = 'myClass';
+    //iterate through an array
+    for (let i = 0; i < arrayLength; i++) {
+      
+      //create a list item for every element
+
+      let listItem = document.createElement('li');
+      
+      //create a textnode to store the value
+
+      let listValue = document.createTextNode(myShoppingList[i]);
+
+      //append value in the list item 
+      listItem.appendChild(listValue);
+      
+      //append the list item in the list
+      myList.appendChild(listItem);
+    }
+
+      container.appendChild(myList);
+    
+  }
+    else {
+      var message = document.createTextNode('Node friends');
+      container.appendChild(message);
+    }
+  
+  }
+
+
   //Write your code in here
-}
+
 
 /**
  * I'd like to display my three favorite books inside a nice webpage!
@@ -69,21 +137,57 @@ function insertShoppingList(shoppingList) {
  *  
  * All of your HTML elements should go inside the Div tag with the id "content".
  * 
- * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/*
+ * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
  */
-function insertBooks(books) {
-  //Write your code in here
-}
+ function insertBooks(books) {
+//   //Write your code in here
+//  get the content id by using getElementsById method
+  let container = document.getElementById('content');
+// //creating unOrdered list
+  let unOrderList = document.createElement('ul');
+//   //iterating our each property in books object
+  for (let item in books) {
+    
+//     //creating list items for each property.
+    let listItem = document.createElement('li');
+    let bookParagraph = document.createElement('p');
+    let bookImg = document.createElement('img');
+     bookImg.src = 'http://ecx.images-amazon.com/images/I/41j2ODGkJDL._AA115_.jpg';
+// //     //creating text node for each title and author pair in books object.
+     listItem.appendChild(bookImg);
+   
+//     //creating paragraph for each list item
+   //let bookParagraph = document.createElement('p');
+    let bookDescription = document.createTextNode(books[item].title + ' : ' + books[item].author + '.');
+//     //attaching listItem tpo unOrderedlist
+    listItem.appendChild(bookDescription)
+    listItem.appendChild(bookParagraph);
+    
+//     //attaching paragraph to unordered list
+     //bookParagraph.appendChild(unOrderList);
+     if (books[item].alreadyRead) {
+       listItem.style.backgroundColor = 'green';
+     }
+     else
+     {
+       listItem.style.backgroundColor = 'red';
+    }
+    unOrderList.appendChild(listItem);
 
-//
-//
-//
-//
-// DO NOT EDIT BELOW HERE
-//
-//
-//
-//
+   }
+//   //attaching unordered list to main container as required.
+ container.appendChild(unOrderList);
+  
+     }
+    
+  
+
+
+// //DO NOT EDIT BELOW HERE
+
+
+
+
 
 let people = [
   { name: "Chris", job: "Teacher" },
@@ -101,12 +205,14 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    
   },
   {
     title: "The Pragmatic Programmer",

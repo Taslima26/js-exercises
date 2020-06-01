@@ -15,6 +15,8 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+let allPTags = document.querySelectorAll('p');
+console.log(allPTags);
 
 
 /*
