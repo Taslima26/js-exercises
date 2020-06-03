@@ -39,3 +39,55 @@ blueBtn.addEventListener('click', blueButtonChanged);
 // - Div tag with the id ** Jumbotron ** background color to`#f0ad4e`
 //     - ** Donate a bike ** button background color to`#5751fd`
 //         - ** Volunteer ** button background color to`#31b0d5` and text color to`white`
+
+let orangeButton = document.getElementById("orangeBtn");
+console.log(orangeButton);
+
+let orangeButtonClicked = function ()
+{
+    let DonateABikeButton = document.querySelector('.buttons');
+    DonateABikeButton.style.backgroundColor = '#5751fd';
+    let divTagWithIdJumbotoron = document.querySelector('.Jumbotron');
+    divTagWithIdJumbotoron.backgroundColor = '#f0ad4e';
+    let voluenteerButton = document.querySelector('.btn-secondary');
+    voluenteerButton.style.backgroundColor = '#31b0d5';
+
+
+}
+
+orangeButton.addEventListener('click', orangeButtonClicked);
+
+
+// When clicking ** green ** it should change:
+// - Div tag with the id ** Jumbotron ** background color to`#87ca8a`
+//     - ** Donate a bike ** button background color to`black`
+//         - ** Volunteer ** button background color to`#8c9c08`
+
+let greenButton = document.getElementById('greenBtn');
+
+let greenButtonClicked = function () {
+    let DonateABikeButton = document.querySelector('.buttons');
+    DonateABikeButton.style.backgroundColor = 'black';
+    let divTagWithIdJumbotoron = document.querySelector('.Jumbotron');
+    divTagWithIdJumbotoron.backgroundColor = '#87ca8a';
+    let voluenteerButton = document.querySelector('.btn-secondary');
+    voluenteerButton.style.backgroundColor = '#8c9c08';
+}
+
+greenButton.addEventListener('click', greenButtonClicked);
+
+
+// Just below the buttons, there's a form called **Register with us today**.
+
+// Continue working in `./js/main.js` to add the following functionality:
+
+// When the submit button is pressed, it should check that all the form fields are valid:
+
+// - The ** Email address **, ** Your name ** and ** Describe yourself ** fields need to be non - empty(Hint: their`value` length has to be greater than zero)
+//     - For the ** Email Address ** field also check if it contains the`@` character
+
+// For all the fields that invalid, it should make their background color`red`.
+// If all the fields are valid, when you click ** Submit ** it should:
+
+// - Display an alert to thank you for filling out the for.
+// - Blank out(make empty) all the text fields
