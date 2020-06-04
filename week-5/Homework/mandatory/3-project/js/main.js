@@ -91,3 +91,42 @@ greenButton.addEventListener('click', greenButtonClicked);
 
 // - Display an alert to thank you for filling out the for.
 // - Blank out(make empty) all the text fields
+
+
+//let form = document.querySelector('#myForm');
+let submitButton = document.querySelector("form > button");
+
+//let submitButton=document.querySelector("#content > div.row > div.primary-content.col-lg-8 > form > button")
+let exampleTextInput = document.querySelector("#example-text-input");
+let exampleTextArea = document.querySelector("#exampleTextarea");
+let exampleTextEmailArea = document.querySelector("#exampleInputEmail1");
+
+let formSubmitButtonPressed = function () {
+    
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    
+    if (exampleTextInput.value.length <= 0) {
+        exampleTextInput.style.backgroundColor = 'red';
+        alert('please enter valid name');
+        
+    }
+    else if (exampleTextArea.value.length <= 0) {
+        exampleTextArea.style.backgroundColor = 'red';
+        alert('please enter valid information');
+    }
+        
+    
+    else if (!exampleTextEmailArea.value.length >= 0 && exampleTextEmailArea.matches(mailformat)) {
+        
+        exampleTextEmailArea.style.backgroundColor = 'red';
+        alert('please enter valid email address');
+    }
+}
+
+//define event function
+
+submitButton.addEventListener('click', formSubmitButtonPressed)
+
+
+
+//registerButton.addEventListener('click', registerbuttonPressed);
