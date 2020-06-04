@@ -5,17 +5,11 @@
 myArr = ['Keep', 'Remove', 'Keep', 'Remove', 'Keep'];
 function removeEveryOther(arr) {
     //your code here
-    for (let i = 0; i < arr.length; i++) {
-        const index = arr.indexOf(arr[i]);
-        console.log(index);
-        var newArr = arr.filter(function (index) {
-            
-        });
-        if (index %2===0) {
-            arr.splice
-        }
+    for (let i = 0; i < arr.length; i++){
+        arr.splice(i + 1, 1);
     }
     return arr;
+    
 
 }
 

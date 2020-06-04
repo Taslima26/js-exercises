@@ -139,42 +139,55 @@ function insertShoppingList(myShoppingList) {
  * 
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
  */
- function insertBooks(books) {
+let bookImageArray = ['.\image - 1.jpg', '.\image-2.jpg', '.\image-3.jpg']
+function insertBooks(books) {
+ 
 //   //Write your code in here
 //  get the content id by using getElementsById method
   let container = document.getElementById('content');
 // //creating unOrdered list
   let unOrderList = document.createElement('ul');
+  unOrderList.style.display = 'flex';
 //   //iterating our each property in books object
+  //for (let item in books) {
   for (let item in books) {
     
-//     //creating list items for each property.
+    //     //creating list items for each property.
     let listItem = document.createElement('li');
+    listItem.style.margin = '10px';
+    listItem.style.height = '250px';
+    listItem.style.listStyle = 'none';
     let bookParagraph = document.createElement('p');
-    let bookImg = document.createElement('img');
-     bookImg.src = 'http://ecx.images-amazon.com/images/I/41j2ODGkJDL._AA115_.jpg';
-// //     //creating text node for each title and author pair in books object.
-     listItem.appendChild(bookImg);
-   
-//     //creating paragraph for each list item
-   //let bookParagraph = document.createElement('p');
     let bookDescription = document.createTextNode(books[item].title + ' : ' + books[item].author + '.');
-//     //attaching listItem tpo unOrderedlist
+    
+    
+    //     //attaching listItem tpo unOrderedlist
     listItem.appendChild(bookDescription)
     listItem.appendChild(bookParagraph);
+
+    let bookImage = document.createElement('img');
+    bookImage.style.width = '70px';
+    bookImage.style.height = '70px';
+    bookImage.style.margin = '10px';
+    bookImage.src = bookImageArray[item];
+    // bookImg.src = ;
+    // //     //creating text node for each title and author pair in books object.
+    listItem.appendChild(bookImage);
+   
+    //     //creating paragraph for each list item
+    //let bookParagraph = document.createElement('p');
     
-//     //attaching paragraph to unordered list
-     //bookParagraph.appendChild(unOrderList);
-     if (books[item].alreadyRead) {
-       listItem.style.backgroundColor = 'green';
-     }
-     else
-     {
-       listItem.style.backgroundColor = 'red';
+    //     //attaching paragraph to unordered list
+    //bookParagraph.appendChild(unOrderList);
+    if (books[item].alreadyRead) {
+      listItem.style.backgroundColor = 'green';
+    }
+    else {
+      listItem.style.backgroundColor = 'red';
     }
     unOrderList.appendChild(listItem);
 
-   }
+  }
 //   //attaching unordered list to main container as required.
  container.appendChild(unOrderList);
   
