@@ -102,8 +102,9 @@ let exampleTextArea = document.querySelector("#exampleTextarea");
 let exampleTextEmailArea = document.querySelector("#exampleInputEmail1");
 
 let formSubmitButtonPressed = function (event) {
+    event.preventDefault();
     
-    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     
     if (exampleTextInput.value.length <= 0) {
         exampleTextInput.style.backgroundColor = 'red';
@@ -116,7 +117,7 @@ let formSubmitButtonPressed = function (event) {
     }
         
     
-    else if (!exampleTextEmailArea.value.length >= 0 && exampleTextEmailArea.matches(mailformat)) {
+    else if (!exampleTextEmailArea.value.includes('@')) {
         
         exampleTextEmailArea.style.backgroundColor = 'red';
         alert('please enter valid email address');
@@ -130,7 +131,7 @@ let formSubmitButtonPressed = function (event) {
 //define event function
 
 submitButton.addEventListener('click', formSubmitButtonPressed)
-event.preventDefault();
+
 
 
 //registerButton.addEventListener('click', registerbuttonPressed);
