@@ -1,12 +1,75 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+
+
+
+
+//let time = textBox.value;
+// function setAlarm() {
+  
+//   let setAlaramButton = document.querySelector("#set");
+//   let stopButton = document.querySelector("#stop")
+//   let time = document.querySelector("#alarmSet").value;
+  
+  
+  
+//   //let timeRemainingField = 'Time Remaining :' + resultValue;
+//   //let counter = document.querySelector("#alarmSet").
+
+//  // let time = 0;
+
+//   // 1. When the`Set Alarm` button is clicked, get the value of the input field
+//   setAlaramButton.addEventListener('click', function (event) {
+   
+//    const  myInterval = setInterval(() => {
+//        time--;
+//      document.querySelector("#timeRemaining").textContent = 'Remaining Time: ' + time;
+//      stopButton.addEventListener('click', function (event) {
+//        clearInterval(myInterval);
+
+//      });
+//      }, 1000);
+   
+  
+//   });
+  
+    
+  
+// }
+
+
+// setAlarm();
+
+function setAlarm() {
+  let seconds = document.querySelector("#alarmSet").value;
+  document.getElementById("set").addEventListener("click", setup);
+  document.getElementById("stop").addEventListener("click", pauseAlarm);
+  var timer;
+  function setup() {
+    clearInterval(timer);
+    timer = setInterval(decrement, 1000);
+  }
+  function decrement() {
+    seconds--;
+    if (seconds === 0) {
+      pauseAlarm();
+    }
+    document.querySelector("#timeRemaining").textContent = 'Remaining Time :'+ seconds;
+  }
+  function pauseAlarm() {
+    clearInterval(timer);
+  }
+  
+}
+
+
 
 // DO NOT EDIT BELOW HERE
 /* 
  Try to reason about the code below and understand what it will do.
- You will see that it attaches some event listeners to buttons on the page as well as how to play Audio from JS.
+ You will see that it attaches some event listeners to buttons on
+  the page as well as how to play Audio from JS.
  If you don't remember how to use events, please revisit the previous lession.
 */
 
@@ -43,13 +106,19 @@ function pauseAlarm() {
  Here you can read more about window interface and see what properties it has:
  https://developer.mozilla.org/en-US/docs/Web/API/Window
 
- We use the "onload" Window event to run a function when all resources and the DOM has been loaded and ready to use.
- This ensures that "setup" function can find the elements defined in index.html file even if the script HTML tag
- in the index file is appears earlier than the actual HTML elements we look up inside that function. 
+ We use the "onload" Window event to run a function when all 
+ resources and the DOM has been loaded and ready to use.
+ This ensures that "setup" function can find the elements 
+ defined in index.html file even if the script HTML tag
+ in the index file is appears earlier than the actual HTML 
+ elements we look up inside that function. 
  
- You can play and try to see what happens if you replace "window.onload = setup;" with "setup();" function call instead.
- If you open the browser console, you should see an error "Cannot read property 'addEventListener' of null".
- It occurs because this script is being executed earlier and the elements it tries to find hasn't been yet loaded.
+ You can play and try to see what happens if you replace "window.onload = setup;"
+  with "setup();" function call instead.
+ If you open the browser console, you should see an error 
+ "Cannot read property 'addEventListener' of null".
+ It occurs because this script is being executed earlier and the 
+ elements it tries to find hasn't been yet loaded.
  (An alternative way to fix it is by moving the script tags after element with the id "stop".)
  
  Documentation for onload event documentation: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload
