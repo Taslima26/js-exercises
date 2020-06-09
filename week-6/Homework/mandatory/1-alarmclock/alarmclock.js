@@ -53,6 +53,7 @@ function setAlarm() {
   function decrement() {
     seconds--;
     if (seconds === 0) {
+      playAlarm();
       pauseAlarm();
     }
     document.querySelector("#timeRemaining").textContent = 'Remaining Time :'+ seconds;
