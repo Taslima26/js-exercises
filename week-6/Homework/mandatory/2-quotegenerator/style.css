@@ -1,1 +1,28 @@
 /** Write your CSS in here **/
+#backgroundColorBody{
+    background-color: aqua;
+    
+    
+}
+
+#quoteDiv{
+background-color: azure;
+margin: 22%;
+
+
+}
+#quoteParagraph{
+    margin:10%;
+}
+
+#quoteAuthorParagraph{
+    margin:5%;
+    justify-content: right;
+}
+
+#newQuoteButton{
+background-color: aqua;
+
+margin-right: 55%;
+justify-content: right;
+}

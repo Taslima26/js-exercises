@@ -14,42 +14,26 @@
   
   
   
-//   //let timeRemainingField = 'Time Remaining :' + resultValue;
-//   //let counter = document.querySelector("#alarmSet").
-
-//  // let time = 0;
-
-//   // 1. When the`Set Alarm` button is clicked, get the value of the input field
-//   setAlaramButton.addEventListener('click', function (event) {
-   
-//    const  myInterval = setInterval(() => {
-//        time--;
-//      document.querySelector("#timeRemaining").textContent = 'Remaining Time: ' + time;
-//      stopButton.addEventListener('click', function (event) {
-//        clearInterval(myInterval);
-
-//      });
-//      }, 1000);
-   
-  
-//   });
-  
-    
-  
-// }
-
-
-// setAlarm();
-
 function setAlarm() {
   let seconds = document.querySelector("#alarmSet").value;
   document.getElementById("set").addEventListener("click", setup);
+  document.getElementById('set').addEventListener('click', setColor);
   document.getElementById("stop").addEventListener("click", pauseAlarm);
+
   var timer;
   function setup() {
     clearInterval(timer);
     timer = setInterval(decrement, 1000);
   }
+  function setColor() {
+    var x = document.body;
+    x.style.backgroundColor = x.style.backgroundColor == "blue" ? "red" : "blue";
+  }
+
+  var idVar = setInterval(() => {
+    setColor()
+  }, 1000);
+
   function decrement() {
     seconds--;
     if (seconds === 0) {
