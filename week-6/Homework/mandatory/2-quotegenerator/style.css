@@ -1,28 +1,39 @@
 /** Write your CSS in here **/
 #backgroundColorBody{
-    background-color: aqua;
-    
-    
+    background-image: url(images/image4.jpeg)
 }
+    
+    
+
 
 #quoteDiv{
-background-color: azure;
-margin: 22%;
+color:rgb(54, 52, 48);
+font-family: 'Courier New', Courier, monospace;
+font-size: medium;
 
 
 }
 #quoteParagraph{
-    margin:10%;
+    color:wheat;
+font-family: 'Courier New', Courier, monospace;
+font-size: 3rem;
+    
+    color:rgb(54, 52, 48);
+    font-weight: bolder;
 }
 
 #quoteAuthorParagraph{
-    margin:5%;
+    
     justify-content: right;
+    color:rgb(54, 52, 48);
+    font-weight: bolder;
+    font-size: 2.5rem;
 }
 
 #newQuoteButton{
 background-color: aqua;
 
-margin-right: 55%;
+
 justify-content: right;
 }
+

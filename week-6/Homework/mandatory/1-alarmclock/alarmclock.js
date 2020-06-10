@@ -1,20 +1,6 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
-
-
-
-
-
-//let time = textBox.value;
-// function setAlarm() {
-  
-//   let setAlaramButton = document.querySelector("#set");
-//   let stopButton = document.querySelector("#stop")
-//   let time = document.querySelector("#alarmSet").value;
-  
-  
-  
-function setAlarm() {
+  function setAlarm() {
   let seconds = document.querySelector("#alarmSet").value;
   document.getElementById("set").addEventListener("click", setup);
   document.getElementById('set').addEventListener('click', setColor);
@@ -25,15 +11,7 @@ function setAlarm() {
     clearInterval(timer);
     timer = setInterval(decrement, 1000);
   }
-  function setColor() {
-    var x = document.body;
-    x.style.backgroundColor = x.style.backgroundColor == "blue" ? "red" : "blue";
-  }
-
-  var idVar = setInterval(() => {
-    setColor()
-  }, 1000);
-
+  
   function decrement() {
     seconds--;
     if (seconds === 0) {
@@ -44,8 +22,18 @@ function setAlarm() {
   }
   function pauseAlarm() {
     clearInterval(timer);
-  }
-  
+    }
+    
+    //set up flashing background
+    function setColor() {
+      var x = document.body;
+      x.style.backgroundColor = x.style.backgroundColor == "blue" ? "red" : "blue";
+    }
+
+    var idVar = setInterval(() => {
+      setColor()
+    }, 1000);
+
 }
 
 
