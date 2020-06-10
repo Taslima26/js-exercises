@@ -8,7 +8,9 @@ Task 1
 Create a function called "showMovies" that
 - iterates through the "movies" array and
 - for each movie, it creates a <p> element with the movie title and director and append it to the #all-movies div.
-- it sets the innerText of the #movies-number element to the total number of the movies in the array "movies"
+- it sets the innerText of the #movies-number element to the total number of the movies in the array "movies"/*
+ 
+
 
 Task 2
 Amend your function above to only show movies after 1 second. Remember to use setTimeout to achieve that
@@ -32,8 +34,23 @@ When the button is clicked
 TIP: Use the functions you created on tasks 1-3
 
 Prefer to work on a codepen? https://codepen.io/makanti/pen/MWwMgmW?editors
+
+
 ================
 */
+
+// Task 1
+// Create a function called "showMovies" that
+//   - iterates through the "movies" array and
+//     - for each movie, it creates a < p >
+//element with the movie title and director and append it to the #all - movies div.
+// - it sets the innerText of the #movies - number element 
+//to the total number of the movies in the array "movies"/*
+
+console.log('hello');
+
+
+
 const movies = [
   {
     title: "Color Out of Space",
@@ -61,7 +78,46 @@ const movies = [
   },
 ];
 
-// create showMovies function
+function showMovies() {
+  movies.forEach(function(movie) {
+    let movieParagraph = document.createElement('p');
+    movieParagraph.innerText = `${movie.title} and directed by ${movie.director} .`;
+    let displayDiv = document.querySelector("#all-movies")
+    displayDiv.appendChild(movieParagraph);
+    console.log(movieParagraph);
+
+    
+  });
+    
+}
+
+showMovies([
+  {
+    title: "Color Out of Space",
+    director: "Richard Stanley",
+    type: "sci-fi",
+    haveWatched: true,
+  },
+  {
+    title: "A Twelve-Year Night",
+    director: "Álvaro Brechner",
+    type: "horror",
+    haveWatched: false,
+  },
+  {
+    title: "The Whistlers",
+    director: "Corneliu Porumboiu",
+    type: "comedy",
+    haveWatched: true,
+  },
+  {
+    title: "The Invisible Man",
+    director: "Leigh Whannell",
+    type: "horror",
+    haveWatched: false,
+  },
+])
+//create showMovies function
 
 
 // create a new movie object for your favorite movie

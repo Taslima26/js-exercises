@@ -12,9 +12,8 @@ function setUp() {
 
 // }
 // document.querySelector("#newQuoteButton").addEventListener('click', setUp);
-let checkBox=document.querySelector("#displayQuoteTrue").value
-  if (checkBox === 'on') {
-    setInterval(setUp, 1000)
+if (document.querySelector("#displayQuoteTrue").checked = true){
+   setInterval(setUp, 1000)
   }
 
 
