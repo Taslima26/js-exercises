@@ -78,49 +78,89 @@ const movies = [
   },
 ];
 
-function showMovies() {
-  movies.forEach(function(movie) {
-    let movieParagraph = document.createElement('p');
-    movieParagraph.innerText = `${movie.title} and directed by ${movie.director} .`;
-    let displayDiv = document.querySelector("#all-movies")
-    displayDiv.appendChild(movieParagraph);
-    console.log(movieParagraph);
+// function showMovies() {
+//   movies.forEach(function (movie) {
+//     let movieParagraph = document.createElement('p');
+//     movieParagraph.innerText = `${movie.title} and directed by ${movie.director} .`;
+//     let displayDiv = document.querySelector("#all-movies")
+//     displayDiv.appendChild(movieParagraph);
+//     console.log(movieParagraph);
 
     
-  });
+//   });
+// }
     
-}
 
-showMovies([
-  {
-    title: "Color Out of Space",
-    director: "Richard Stanley",
-    type: "sci-fi",
-    haveWatched: true,
-  },
-  {
-    title: "A Twelve-Year Night",
-    director: "Álvaro Brechner",
-    type: "horror",
-    haveWatched: false,
-  },
-  {
-    title: "The Whistlers",
-    director: "Corneliu Porumboiu",
-    type: "comedy",
-    haveWatched: true,
-  },
-  {
-    title: "The Invisible Man",
-    director: "Leigh Whannell",
-    type: "horror",
-    haveWatched: false,
-  },
-])
+
+
+
+// setTimeout(showMovies, 1000);
+
+
+
+// Task 2
+// Amend your function above to only show movies after 1 second.Remember 
+//to use setTimeout to achieve that
+// Create a new function called "addMovie"
+//   - it receives a movie object as an argument - 
+//your can create a new object 
+//for your favorite movie following using the "myMovies" objects as a guide
+//     - it adds the new movie to the list of movies after 2 seconds.
+//Remember to setTimeout to achieve that
+// Call addMovies to add the new movie to the list and then 
+//showMovies to see the movies added on the screen.
+// How many movies can you see on your page ?
+
 //create showMovies function
+//create object myMovies
+
+const myMovies = {
+  title: "The Invisible Man-2",
+  director: "Leigh Whannell-2",
+  type: "horror-2",
+  haveWatched: false,}
 
 
-// create a new movie object for your favorite movie
+// create a new movie object for your favorite moviese
 
 
-// create addMovies function
+
+//setTimeout(addMovies(movies), 30000)
+
+function appendMovies() {
+  document.querySelector("#main > div > form > input[type=submit]:nth-child(18)").addEventListener
+    ('click', function (e) {
+      e.preventDefault();
+      movies.forEach(function (movie) {
+        movie.title = document.querySelector("#movieName").value;
+        console.log(movie.title);
+        movie.director = document.querySelector("#directorName").value;
+        movie.type = document.querySelector("#movieType").value;
+        movie.haveWatched = document.querySelector("#hasWatched").value;
+        let movieParagraph = document.createElement('p');
+        movieParagraph.innerText = `${movie.title} and directed by ${movie.director}  and type is ${movie.type} and I have watched ${movie.has
+          }.`;
+        let displayDiv = document.querySelector("#all-movies")
+        displayDiv.appendChild(movieParagraph);
+        
+      });
+      
+    })
+}
+setInterval(appendMovies,10000)
+
+
+// Task 3
+// Can you make sure the new movie you just added is showing on the screen ?
+//   TIP : use callbacks
+
+// Task 4 - ** Extra **
+//   Create a form anywhere on your page.The form should have
+//     - 4 input text fields, one for each property of your movie object
+//       - a "save" button.
+// When the button is clicked
+//   - The field values should be used to create a new movie object literal
+//     - The new movie is then added to the list of movies and gets displayed on your page
+// TIP: Use the functions you created on tasks 1 - 3
+
+

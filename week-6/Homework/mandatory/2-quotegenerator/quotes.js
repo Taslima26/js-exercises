@@ -1,6 +1,4 @@
 
-// window.onload(document.querySelector('#quoteParagraph').innerHTML = "Life is what happens to you while you’re busy making other plans." );
-// window.onload(document.querySelector('#quoteParagraph').innerHTML = "John Lennon");
 
 function setUp() {
   var randomNumber = Math.floor(Math.random() * quotes.length);
@@ -9,12 +7,16 @@ function setUp() {
 
 }
 
-
+var checkBox = document.getElementById("myCheck");
+//document.querySelector("#newQuoteButton").addEventListener('click', setUp);
+document.querySelector("#myCheck").addEventListener('click', setUp);
+// If the checkbox is checked, display the output text
+if (checkBox.checked == true) {
+  setInterval(setup, 1000);
+}
 // }
-// document.querySelector("#newQuoteButton").addEventListener('click', setUp);
-if (document.querySelector("#displayQuoteTrue").checked = true){
-   setInterval(setUp, 1000)
-  }
+ document.querySelector("#newQuoteButton").addEventListener('click', setUp);
+
 
 
 

@@ -18,7 +18,12 @@
       playAlarm();
       pauseAlarm();
     }
-    document.querySelector("#timeRemaining").textContent = 'Remaining Time :'+ seconds;
+    if (seconds < 10) {
+      document.querySelector("#timeRemaining").textContent = 'Remaining Time : 00:0' + seconds;
+    }
+    else {
+      document.querySelector("#timeRemaining").textContent = 'Remaining Time : 00:' + seconds;
+    }
   }
   function pauseAlarm() {
     clearInterval(timer);
