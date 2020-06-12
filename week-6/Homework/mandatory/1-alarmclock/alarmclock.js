@@ -35,7 +35,7 @@
       x.style.backgroundColor = x.style.backgroundColor == "blue" ? "red" : "blue";
     }
 
-    var idVar = setInterval(() => {
+    var idVar = setInterval(function()  {
       setColor()
     }, 1000);
 
