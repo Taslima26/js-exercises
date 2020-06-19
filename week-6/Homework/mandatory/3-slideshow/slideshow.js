@@ -7,7 +7,7 @@
 //browser start and next button will load remaining images eventually as button pressed ?
 
 
-let imagesArray = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg'];
+const imagesArray = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg'];
 //this is the div where I will display the images
 let sliderImage = document.querySelector('.sliderImage')
 let count = 0;
@@ -66,4 +66,3 @@ let backButton = document.querySelector("#backButton").addEventListener('click',
 let nextButton = document.querySelector('#nextButton').addEventListener('click', nextImage);
 let autoForwardButton = document.querySelector("#autoForward").addEventListener('click', autoForward);
 let autoBackButton = document.querySelector("#autoBackButton").addEventListener('click', autoBackward);
-
