@@ -7,7 +7,7 @@ function setUp() {
 
 }
 
-var checkBox = document.getElementById("myCheck");
+const checkBox = document.getElementById("myCheck");
 //document.querySelector("#newQuoteButton").addEventListener('click', setUp);
 document.querySelector("#myCheck").addEventListener('click', setUp);
 // If the checkbox is checked, display the output text
