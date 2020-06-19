@@ -1,7 +1,7 @@
 
 
 function setUp() {
-  var randomNumber = Math.floor(Math.random() * quotes.length);
+  const randomNumber = Math.floor(Math.random() * quotes.length);
   document.querySelector("#quoteParagraph").innerHTML = quotes[randomNumber].quote;
   document.querySelector("#quoteAuthorParagraph").innerHTML = quotes[randomNumber].author;
 
