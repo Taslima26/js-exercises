@@ -31,10 +31,20 @@ problem solving..
 <!-- Write your answer here -->
 
 ## 2. When trying to solve a challenge, what should you do first?
+read and re-read problem untill you completly understand.
+If problem seems unsovable ,decide what you can do first with resources and knowledge you already
+have.Devide problem in to  a small managable chunks.
+Start with initial first little step you have.
+Have some sort of mind map,diagram whatever you are comfertable with.
 
 <!-- Write your answer here -->
 
 ## 3. What should you do if you get stuck?
+Take a break,go for walk have some wateror may be some choclates !! and fresh air.
+Rethink problem from begining.
+Some people use rubber duck --means talking out problem loud,Not my thing though.
+Write down problem in your own word and re-read it.
+
 
 <!-- Write your answer here -->
 
