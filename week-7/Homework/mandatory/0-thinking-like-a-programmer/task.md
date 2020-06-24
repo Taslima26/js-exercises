@@ -25,6 +25,8 @@ Take a look at the following resources to learn more about problem solving as ap
 After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
+problem solving..
+
 
 <!-- Write your answer here -->
 
@@ -35,3 +37,23 @@ After you've watched these videos I'd like you to answer these questions
 ## 3. What should you do if you get stuck?
 
 <!-- Write your answer here -->
+
+
+problem solving--
+see the problem--
+structure-you need framework
+common framework-
+1.understand the problem---
+draw mind map -visualize the problem-draw diagram,rubber ducky -talk about loud...
+2..split the big problem in to smaller task..
+knocout each smaller problem out of way.
+example-math problem--
+split the problem in to smaller steps as you move towards the solution.
+3..Get unstuck-fix bugs ,errors--
+rubber duck method to understand the problem
+re-evalute 
+if noneof the things work start over
+do not need to delete everything
+practice problem solving
+work on algorithms
+algo expert-sudoko
