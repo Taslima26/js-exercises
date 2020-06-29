@@ -24,6 +24,10 @@ The following endpoint is publicly available from Github
 
 1. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
+1. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
+
+ GET https://api.github.com/repos/Taslima26/js-exercises/pull/4/
+
 <!-- Write your answer here -->
 
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
