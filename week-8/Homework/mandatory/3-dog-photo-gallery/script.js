@@ -25,14 +25,16 @@ clickButton.addEventListener('click', () => {
     })
         .then((data) => {
             const picture = data.message;
-           // console.log(picture);
-           // const listElement = document.createElement('li');
-           // console.log(listElement);
+            console.log(picture);
+            const listElement = document.createElement('li');
+            console.log(listElement);
             const imageElement = document.createElement('img');
             imageElement.src = picture;
-            document.getElementById('container').appendChild(imageElement);
+            document.getElementById('list').appendChild(imageElement);
                 
 
+        }).catch((error) => {
+            console.log(error)
         });
     
     
