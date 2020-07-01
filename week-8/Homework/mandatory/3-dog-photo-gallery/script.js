@@ -25,10 +25,9 @@ clickButton.addEventListener('click', () => {
     })
         .then((data) => {
             const picture = data.message;
-            console.log(picture);
             const listElement = document.createElement('li');
-            console.log(listElement);
             const imageElement = document.createElement('img');
+            listElement.appendChild(imageElement);
             imageElement.src = picture;
             document.getElementById('list').appendChild(imageElement);
                 

@@ -22,6 +22,9 @@
         imageDiv.appendChild(imageElement);
 
     
+    }).catch((error) =>{
+    console.log(error);
+    
     });
 
 

@@ -21,6 +21,11 @@ fetch('https://quotes.rest/quote/random?language=en&limit=1')
     .then(function(response) {
         return response.text();
     })
-    .then(function(greeting) {
+    .then(function (greeting) {
+        console.log(greeting);
         // Write the code to display the greeting text here
+        document.querySelector("#greeting-text").innerHTML = greeting;
+
+    }).catch((error) => {
+        console.log(error);
     });
