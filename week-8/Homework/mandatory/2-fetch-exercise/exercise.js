@@ -16,13 +16,13 @@ Expected result
 Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
-
+//Hi Mitch somehow the provided url seems to not working .Therefore I am submitting as it is.Thank you .
 fetch('https://quotes.rest/quote/random?language=en&limit=1')
     .then(function(response) {
         return response.text();
     })
     .then(function (greeting) {
-        console.log(greeting);
+       
         // Write the code to display the greeting text here
         document.querySelector("#greeting-text").innerHTML = greeting;
 
